@@ -1,15 +1,11 @@
 {
-    "type": "postgres",
-    "host": "localhost",
-    "port": 5432,
-    "username": "postgres",
-    "password": "postgres",
-    "database": "nlw05",
-    "entities": [
-        "./src/entities/**.ts"
-    ],
+    "type": "sqlite",
+    "database": "./src/database/database.sqlite",
     "migrations": [
         "./src/database/migrations/**.ts"
+    ],
+    "entities": [
+        "./src/entities/**.ts"
     ],
     "cli": {
         "migrationsDir": "./src/database/migrations"
