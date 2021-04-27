@@ -8,12 +8,12 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
   chat_in_support.style.display = "block";
 
   const email = document.querySelector("#email").value;
-  const text = document.querySelector("#txt_help").value;
+  const text = document.querySelector(".txt_help").value;
 
   socket.on("connect", () => {
     const params = {
-      email,
       text,
+      email,
     };
 
     socket.emit("client_first_access", params, (call, err) => {
